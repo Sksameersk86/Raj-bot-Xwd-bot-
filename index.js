@@ -20,7 +20,7 @@ const messageQueues = {};
 const queueRunning = {};
 
 const app = express();
-app.get("+", (_, res) => res.send("<h2>Messenger Bot Running</h2>"));
+app.get("/", (_, res) => res.send("<h2>Messenger Bot Running</h2>"));
 app.listen(20782, () => console.log("🌐 Log server: http://localhost:20782"));
 
 process.on("uncaughtException", (err) => console.error("❗ Uncaught Exception:", err.message));
@@ -92,7 +92,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         !friendUIDs.includes(senderID)
       ) {
         return api.sendMessage(
-          "Oy rendi ke pille me raj xwd ka banaya bot hu tu mujhe mahi chala payega suwar ke bakkal 😕",
+          "Oy rendi ke pille me raj xwd ka banaya bot hu tu mujhe nahi chala payega suwar ke bakkal 😕",
           threadID,
           messageID
         );
