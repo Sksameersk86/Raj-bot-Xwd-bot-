@@ -20,7 +20,7 @@ const messageQueues = {};
 const queueRunning = {};
 
 const app = express();
-app.get("/", (_, res) => res.send("<h2>Messenger Bot Running</h2>"));
+app.get("+", (_, res) => res.send("<h2>Messenger Bot Running</h2>"));
 app.listen(20782, () => console.log("🌐 Log server: http://localhost:20782"));
 
 process.on("uncaughtException", (err) => console.error("❗ Uncaught Exception:", err.message));
@@ -189,7 +189,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         if (rkbInterval) {
           clearInterval(rkbInterval);
           rkbInterval = null;
-          api.sendMessage("Aj se ((hud gaye bche🤣", threadID);
+          api.sendMessage("Raj xwd  se ((hud gaye bche🤣", threadID);
         } else {
           api.sendMessage("konsa gaLi du sale ko🤣 rkb tha", threadID);
         }
