@@ -92,7 +92,7 @@ login({ appState: JSON.parse(fs.readFileSync("appstate.json", "utf8")) }, (err, 
         !friendUIDs.includes(senderID)
       ) {
         return api.sendMessage(
-          "Oy rendi ke pille me raj xwd ka banaya bot hu tu mujhe nahi chala payega suwar ke bakkal 😕",
+  
           threadID,
           messageID
         );
